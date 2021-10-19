@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="de">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width" , initial-scale="1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Quiz</title>
+	<style>
+		button {
+			margin: 30px;
+			padding: 10px 50px;
+			color: white;
+			font-size: 2em;
+			border-radius: 20px;
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+
+
+
+<div id="container">
+	<button type="button" id="btn">Start</button>
+	<div id="quizDiv"></div>
+</div>
+<script src="table.js"></script>
+<script>
+	var quiz = {};
+	quiz.tab1 = table1();
+	quiz.tab2 = table2();
+	console.log(table1().length, table2().length)
+	console.log(quiz);
+	quiz.setQ = function ( zufall ) {
+		for (var i = 1; i < 6; i++) {
+			var q= 'q'+i;
+			quiz[q] = zufall[i];
+		}
+	}
+	quiz.zufall = function (start, end) {
+		var numQ = end - start;
+		console.log(numQ);
+		var zufall = [];
+		for (var i = 0; i <= 5 ; i++) {
+			zufall[i] = Math.floor(Math.random() * 65) + 1;
+		}
+		return zufall
+	}
+	
+	quiz.setQ( quiz.zufall( 1, 65) )
+	
+	
+	/*
+	100 Fragen ( Themenbereich)
+	block 1-65
+	block 66-100
+	
+	start Prüfung:
+	Es wird eine frage nach der anderen (klick "nächste Frage") ausgegeben
+	
+	Fragen aus block 1 und 2 Fragen aus block 2 (per Zufall)
+	Keine doppelten fragen
+	
+	---------
+	1. Fragen ins HTML od. Array/Objekt (2.Blöcke?)
+	2. Button Click (EventListener)
+	3. Bereich für Ausgabe (od. ein/ausblenden)
+	4. Zufallsgenerator
+		4.1 3x 1-65 danach 2x 66-100
+		4.2 doppelten weg und neu ermitteln
+		4.3 durchmischen, shuffle... (google kennt Lösungen)
+	5. keine dopplten!!! merken welche man schon hat
+	6. nach der 5ten is Schluss..
+	
+	*/
+	
+	
+</script>
+
+</body>
+</html>
