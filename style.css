@@ -1,9 +1,62 @@
-
+h1 {
+    text-align: center;
+}
+p {
+    font-size: 1.4em;
+    text-align: center;
+    margin-top: 15%;
+}
+#container {
+    /*margin-top: 5%;*/
+    /*margin-left: 15%;*/
+    text-align: center;
+}
 button {
-    margin: 30px;
     padding: 10px 50px;
     color: white;
     font-size: 2em;
     border-radius: 20px;
     background-color: blue;
+}
+#start {
+    text-align: center;
+}
+button#btnStart {
+}
+button#btnNext {
+    margin-top: 70px;
+}
+button#btnNew {
+    background-color: green;
+    margin-bottom: 15px;
+}
+#quizDiv {
+    width: 100%;
+    height: 70px;
+}
+.quizText {
+    /*left: 30%;*/
+    margin: auto;
+    padding: 15px 40px;
+    border-radius: 20px;
+    border: 1px solid #FFFFFFFF;
+    background-color: #FFFFFFFF;
+    box-shadow:
+            inset 0 -3em 3em rgba(0,0,0,0.1),
+            0 0  0 2px rgb(255,255,255),
+            0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+.endText {
+    color: green;
+    margin: auto;
+    padding: 15px 40px;
+    border-radius: 20px;
+    border: 1px solid #FFFFFFFF;
+    background-color: #FFFFFFFF;
+
+}
+@media screen and (max-width: 600px) {
+    button {
+        margin-top: 200px !important;
+    }
 }
